@@ -2,14 +2,15 @@
 
 .mascot-image.stickyTop {
   position: fixed;
-  width: 38vw;
+  width: 35vw;
   top:15vh;
+
   /* transition: 3s; */
 }
 
 .mascot-image.stickyBottom {
   position: absolute;
-  width: 38vw;
+  width: 35vw;
   bottom:0;
   /* transition: 3s; */
 }
@@ -33,14 +34,16 @@
 
 .mascot-image-width.stickyTop {
   position: fixed;
-  width: 38vw;
+  width: 35vw;
   top:15vh;
+  
   /* transition: 3s; */
 }
 
 .mascot-image-width.stickyBottom {
   position: absolute;
-  width: 38vw;
+  width: 35vw;
   bottom:0;
+ 
   /* transition: 3s; */
 }

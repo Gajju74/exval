@@ -13,6 +13,7 @@ import {
 import infographic from "../assets/images/infographic.svg";
 import mascot2 from "../assets/images/pose_01.svg";
 import mascot from "../assets/images/pose_06a.png";
+import mascot6 from "../assets/images/pose_06a.png";
 import Image from "../components/Image";
 import ContactForm from "../components/ContactForm";
 import UnderlinedText from "../components/UnderlinedText";
@@ -34,7 +35,6 @@ const AboutUs = () => {
     const handleScroll = () => {
       const parentContainer = parentRef.current;
       const mascotImage = mascotRef.current;
-
       const parentTop =
         parentContainer.offsetTop - (15 * window.innerHeight) / 100; // Adding 15vh
       const mascotHeight = mascotImage.offsetHeight;
@@ -56,13 +56,12 @@ const AboutUs = () => {
         mascotImage.classList.remove("stickyTop");
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <Container
       sx={{
@@ -135,7 +134,7 @@ const AboutUs = () => {
             style={{ position: "relative" }}
           >
             <Image
-              src={mascot}
+              src={mascot6}
               sx={{ width: "33vw", objectFit: "contain", align: "center" }}
               className="mascot-image"
               ref={mascotRef}
@@ -143,6 +142,7 @@ const AboutUs = () => {
           </Grid>
           <Grid
             item
+            style={{ paddingLeft: "1.4rem" }}
             sm={12}
             md={6.8}
             lg={6.8}
@@ -150,6 +150,7 @@ const AboutUs = () => {
               "@media (max-width: 959.95px)": {
                 p: 5,
                 width: "100vw",
+                paddingLeft: "1.4rem"
               },
             }}
           >
@@ -303,13 +304,13 @@ const AboutUs = () => {
                   img={it.img}
                   name={it.name}
                   role={it.role}
-                  // sx={{
-                  //   mb: "4ch !important",
-                  //   ml: i === 0 ? "3ch !important" : "7ch !important",
-                  //   "@media (max-width: 959.95px)": {
-                  //     ml: "13ch !important",
-                  //   },
-                  // }}
+                // sx={{
+                //   mb: "4ch !important",
+                //   ml: i === 0 ? "3ch !important" : "7ch !important",
+                //   "@media (max-width: 959.95px)": {
+                //     ml: "13ch !important",
+                //   },
+                // }}
                 />
               </Box>
             ))}

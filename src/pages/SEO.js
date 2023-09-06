@@ -129,6 +129,7 @@ const SEO = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           position: "relative",
+          maxWidth: "100% !important",
         }}
       >
         <Typography variant="h1" align="center" sx={{ maxWidth: "30ch" }}>
@@ -155,7 +156,7 @@ const SEO = () => {
         </Container>
       </Container>
 
-      <Container>
+      <Container >
         <Stack direction="row">
           <Typography>Home</Typography>
           <ChevronRightIcon />
@@ -180,8 +181,8 @@ const SEO = () => {
             md={5}
             sm={12}
             xs={12}
-            // align="center"
-            //display={{ xs: "none", sm: "none", md: "block", lg: "block" }}
+          // align="center"
+          //display={{ xs: "none", sm: "none", md: "block", lg: "block" }}
           >
             <Image
               src={mascot1}
@@ -561,7 +562,7 @@ const SEO = () => {
       <Container
         sx={{
           pt: 7,
-          // maxWidth: "100vw !important",
+          maxWidth: "100% !important",
           // fontSize: "18px",
         }}
       >
@@ -659,7 +660,15 @@ const SEO = () => {
 
               <SwipperTest />
 
-              <Container align="center">
+              <Box
+                sx={{
+                  width: "95%",
+                  "@media (max-width: 959.95px)": {
+                    width: "100%",
+                  },
+                }}
+                align="center"
+              >
                 <Button
                   sx={{
                     backgroundColor: "#3C486B",
@@ -674,7 +683,7 @@ const SEO = () => {
                 >
                   View all projects
                 </Button>
-              </Container>
+              </Box>
             </Box>
 
             <Box my={10} />
